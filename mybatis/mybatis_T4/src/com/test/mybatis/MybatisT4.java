@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.mybatis.dao.UserDao;
 import com.mybatis.model.User;
 
-public class MybatisT3 {
+public class MybatisT4 {
 
 	private static SqlSessionFactory sqlSessionFactory;
 	private static Reader reader;
