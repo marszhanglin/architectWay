@@ -7,6 +7,14 @@ public class User {
 	String email;
 	String birthday;
 	
+	public User(String name, String password, String email,
+			String birthday) {
+		super();
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.birthday = birthday;
+	}
 	public int getId() {
 		return id;
 	}

@@ -47,7 +47,7 @@
 	
 	<!--多参数 -->
 	<select id="selectListByName5"   resultType="User">
-		select * from users where name =  #{0}   or  id = #{1}
+		select * from users where name = #{0} or id = #{1}
 	</select>
 	
 </mapper>

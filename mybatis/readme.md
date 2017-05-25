@@ -2,7 +2,7 @@
 
 mybatis_T1：简单搭建起来
 
-mybatis_T2：什么都没有
+mybatis_T2：什么都没有，是web工程
 
 mybatis_T3：模糊查询
 

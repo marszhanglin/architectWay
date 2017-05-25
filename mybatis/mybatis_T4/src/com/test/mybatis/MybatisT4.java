@@ -38,19 +38,28 @@ public class MybatisT4 {
 	public static void main(String[] args) {
 		 SqlSession session = sqlSessionFactory.openSession();
 	        try {
-	        	UserDao userDao=session.getMapper(UserDao.class);
-	            /*User user = userDao.selectUserByID(4); 
+	        	/*User user = userDao.findByID(4); 
 	            System.out.println(user.getName()+"------"+user.getBirthday());*/
+	        	UserDao userDao=session.getMapper(UserDao.class);
+	        	boolean succ=userDao.save(new User("name_no_005", "123456", "name_no_005@qq.com", "1990-12-03"));
+	        	System.out.println(succ);
+	        	List<User> users = userDao.selectListByName1("CONCAT(CONCAT('%', name), '%')");
+	        	for(User user:users){ 
+		            System.out.println(user.getName()+"------"+user.getBirthday());
+	        	}
 	        	/*List<User> users=userDao.selectListByName1("%n%");*/
 	        	/*List<User> users=userDao.selectListByName2("n");*/
 	        	/*List<User> users=userDao.selectListByName3("n");*/
 	        	/*List<User> users=userDao.selectListByName4("3");*/
 	        	/*List<User> users=userDao.selectListByName5("name_no_003",2);*/
-	        	List<User> users=userDao.selectListByName5("name_no_003",2);
+	        	/*List<User> users=userDao.selectListByName5("name_no_003",2);
 	        	for(User user:users){ 
 		            System.out.println(user.getName()+"------"+user.getBirthday());
-	        	}
-	        } finally {
+	        	}*/
+	        } catch (Exception e) { 
+	        	session.rollback();
+			}finally {
+	        	session.commit();
 	            session.close();
 	        }
 	}
