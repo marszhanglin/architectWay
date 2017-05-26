@@ -43,7 +43,7 @@ public class MybatisT4 {
 	        	UserDao userDao=session.getMapper(UserDao.class);
 	        	boolean succ=userDao.save(new User("name_no_005", "123456", "name_no_005@qq.com", "1990-12-03"));
 	        	System.out.println(succ);
-	        	List<User> users = userDao.selectListByName1("CONCAT(CONCAT('%', name), '%')");
+	        	List<User> users = userDao.selectListByName1("n");
 	        	for(User user:users){ 
 		            System.out.println(user.getName()+"------"+user.getBirthday());
 	        	}
@@ -56,9 +56,7 @@ public class MybatisT4 {
 	        	for(User user:users){ 
 		            System.out.println(user.getName()+"------"+user.getBirthday());
 	        	}*/
-	        } catch (Exception e) { 
-	        	session.rollback();
-			}finally {
+	        } finally {
 	        	session.commit();
 	            session.close();
 	        }

@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -19,8 +21,8 @@ public interface UserDao {
 	public boolean update(User user);
 	@Select("select * from users where id=#{id}")
 	public User findByID(int id); 
-	//·½·¨Ãû²»ÄÜÏàÍ¬  
-	@Select("select * from users where name like #{value})")
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬  
+	@Select("select * from users where name like CONCAT('%',#{_parameter},'%') ")////CONCAT(CONCAT('%', name), '%')
 	public List<User> selectListByName1(String anyvalue); 
 	@Select("select * from users where name = #{0} or id = #{1}")
 	public List<User> selectListByName2(String anyvalue1,int anyvalue2);
