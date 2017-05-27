@@ -12,10 +12,10 @@ import com.mybatis.dao.UserDao;
 import com.mybatis.model.User;
 
 public class MybatisT4 {
-
+	
 	private static SqlSessionFactory sqlSessionFactory;
 	private static Reader reader;
-
+	
 	static {
 		try {
 			reader = Resources.getResourceAsReader("Configuration.xml");
@@ -41,24 +41,22 @@ public class MybatisT4 {
 	        	/*User user = userDao.findByID(4); 
 	            System.out.println(user.getName()+"------"+user.getBirthday());*/
 	        	UserDao userDao=session.getMapper(UserDao.class);
-	        	boolean succ=userDao.save(new User("name_no_005", "123456", "name_no_005@qq.com", "1990-12-03"));
-	        	System.out.println(succ);
-	        	List<User> users = userDao.selectListByName1("CONCAT(CONCAT('%', name), '%')");
+	        	//boolean succ=userDao.save(new User("name_no_006", "123456", "name_no_006@qq.com", "1990-12-03"));
+	        	//System.out.println(succ);
+	        	userDao.deleteEmailIsNull();
+	        	User userupdate=new User("name_no_004", "123456", "name_no_006@qq.com", "1990-12-03");
+	        	userupdate.setId(36);
+	        	userDao.update(userupdate);
+	        	List<User> users = userDao.selectListByName1("n");
 	        	for(User user:users){ 
-		            System.out.println(user.getName()+"------"+user.getBirthday());
+		            System.out.println(user.getId()+"-----"+user.getName()+"------"+user.getBirthday());
 	        	}
-	        	/*List<User> users=userDao.selectListByName1("%n%");*/
-	        	/*List<User> users=userDao.selectListByName2("n");*/
-	        	/*List<User> users=userDao.selectListByName3("n");*/
-	        	/*List<User> users=userDao.selectListByName4("3");*/
-	        	/*List<User> users=userDao.selectListByName5("name_no_003",2);*/
-	        	/*List<User> users=userDao.selectListByName5("name_no_003",2);
-	        	for(User user:users){ 
-		            System.out.println(user.getName()+"------"+user.getBirthday());
-	        	}*/
-	        } catch (Exception e) { 
+	        } 
+	        catch (Exception e) { 
+	        	
 	        	session.rollback();
-			}finally {
+			}
+	        finally {
 	        	session.commit();
 	            session.close();
 	        }
