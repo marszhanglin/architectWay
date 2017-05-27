@@ -15,6 +15,15 @@ public class User {
 		this.email = email;
 		this.birthday = birthday;
 	}
+	
+	
+	
+	public User() {
+		super();
+	}
+
+
+
 	public int getId() {
 		return id;
 	}
