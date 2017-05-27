@@ -9,5 +9,8 @@ mybatis_T3：模糊查询
 
 
 
+### 槽点 ###
+1、POJO对象 构造函数被重载过，但是没有空的构造函数。  这个时候就不行了  
+
 ### 参考博客： ###
 [http://www.tuicool.com/articles/q2mui2](http://www.tuicool.com/articles/q2mui2)
