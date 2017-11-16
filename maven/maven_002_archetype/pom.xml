@@ -1,58 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-	
-	<!-- 相当于包名-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+    <modelVersion>4.0.0</modelVersion>  
+  
+    <!-- 相当于包名-->
     <groupId>com.mars.maven</groupId>
 	<!-- 项内目唯一id -->
-    <artifactId>hello_word</artifactId>
+    <artifactId>hello-web-archetype</artifactId>  
 	<!-- 当前版本 -->
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 	<!-- 友好名称（非必要）-->
-	<name>hellow word</name>
-	
-	<!-- 依赖集合-->
-	<dependencies>
-		<!-- 单个依赖-->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<!-- 该依赖的适用范围，默认值为complie（表示可以在main及test内import），这里设置为test表示只能在test内使用-->
-			<scope>test</scope>
-		</dependency>
-	
-	</dependencies> 
-	
-	<build>
-		<plugins>
-		<!--  main插件支持 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>1.2.1</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-							<transformers>
-								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.mars.maven.HelloWorld</mainClass>
-								</transformer>
-							</transformers>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+	<name>hello-web-archetype</name> 
+     
+     
   
-
-	
-	
+    <distributionManagement>  
+        <repository>  
+            <id>releases</id>  
+            <name>Micaicms Releases</name>  
+            <url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>  
+        </repository>  
+        <snapshotRepository>  
+            <id>snapshots</id>  
+            <name>Micaicms Releases</name>  
+            <url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>  
+        </snapshotRepository>  
+    </distributionManagement>  
+  
+    <build>  
+        <pluginManagement>  
+            <plugins>  
+                <plugin>  
+                    <groupId>org.apache.maven.plugins</groupId>  
+                    <artifactId>maven-archetype-plugin</artifactId>  
+                    <version>2.2</version>  
+                </plugin>  
+                <plugin>  
+                    <groupId>org.apache.maven.plugins</groupId>  
+                    <artifactId>maven-compiler-plugin</artifactId>  
+                    <configuration>  
+                        <source>1.5</source>  
+                        <target>1.5</target>  
+                    </configuration>  
+                </plugin>  
+                <plugin>  
+                    <groupId>org.apache.maven.plugins</groupId>  
+                    <artifactId>maven-resources-plugin</artifactId>  
+                    <configuration>  
+                        <encoding>UTF-8</encoding>  
+                    </configuration>  
+                </plugin>  
+            </plugins>  
+        </pluginManagement>  
+    </build>  
+  
 </project>
