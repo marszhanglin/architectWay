@@ -17,3 +17,17 @@
 打包：会根据项目的不同在target下打成war或jar，
 
     mvn package
+
+查看依赖：
+
+    mvn dependency:list   //查看列表
+	mvn dependency:tree	  //查看树形结构
+	mvn dependency:analyze  //分析依赖
+
+
+构建web项目：
+
+    mvn archetype:generate -DgroupId=mars -DartifactId=com.mars.ssm 
+    -DarchetypeArtifactId=maven-archetype-webapp -DinteractivMode=false
+
+

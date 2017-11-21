@@ -13,6 +13,11 @@
 	<!-- 友好名称（非必要）-->
 	<name>hellowword</name>
 	
+	
+	<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	</properties>
+	
 	<!-- 依赖集合-->
 	<dependencies>
 		<!-- 单个依赖-->
