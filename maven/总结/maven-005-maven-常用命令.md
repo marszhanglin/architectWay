@@ -18,6 +18,11 @@
 
     mvn package
 
+生命周期-安装： install 
+
+    mvn install
+
+
 查看依赖：
 
     mvn dependency:list   //查看列表
@@ -29,5 +34,12 @@
 
     mvn archetype:generate -DgroupId=mars -DartifactId=com.mars.ssm 
     -DarchetypeArtifactId=maven-archetype-webapp -DinteractivMode=false
+
+
+本地仓库:
+    
+    E:/硬盘整理/maven/apache-maven-3.3.3/apache-maven-3.3.3/path/to/local/repo
+
+
 
 
