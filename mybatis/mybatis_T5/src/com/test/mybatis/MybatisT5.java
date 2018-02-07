@@ -3,14 +3,12 @@ package com.test.mybatis;
 
 import java.io.Reader;
 import java.util.Date;
-import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.google.gson.Gson;
 import com.mybatis.dao.UserMapper;
 import com.mybatis.model.User;
 
