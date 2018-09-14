@@ -20,7 +20,6 @@ public interface UserDao {
 	public boolean deleteEmailIsNull();
 	@Update("update users set name=#{name},password=#{password},email=#{email} where id=#{id}") 
 	public boolean update(User user);
-	@Select("select * from users where id=#{id}"
 	//多次参数传参又一解决方案：
 	@Select("select * from users where name like concat('%',#{aaa,jdbcType=VARCHAR},'%')  ")
 	public List<User> selectListByName1(@Param("aaa")String anyvalue); 
