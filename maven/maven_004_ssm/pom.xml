@@ -8,18 +8,18 @@
 	<name>SSMDemo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-	<!-- spring°æ±¾ºÅ -->
-		<spring.version>4.0.2.RELEASE</spring.version>
-		<!-- mybatis°æ±¾ºÅ -->
+	<!-- springç‰ˆæœ¬å· -->
+		<spring.version>6.0.0</spring.version>
+		<!-- mybatisç‰ˆæœ¬å· -->
 		<mybatis.version>3.2.6</mybatis.version>
-		<!-- log4jÈÕÖ¾ÎÄ¼þ¹ÜÀí°ü°æ±¾ -->
+		<!-- log4jæ—¥å¿—æ–‡ä»¶ç®¡ç†åŒ…ç‰ˆæœ¬ -->
 		<slf4j.version>1.7.7</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
 	</properties>
 
 
 	<dependencies>
-		<!-- ¼ÓÃÜ½âÃÜÐèÒªµÄjar°ü -->
+		<!-- åŠ å¯†è§£å¯†éœ€è¦çš„jaråŒ… -->
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcprov-ext-jdk15on</artifactId>
@@ -34,25 +34,25 @@
 		</dependency>
 
 
-		<!-- ÓÊ¼þÐèÒªµÄjar°ü£¬¼Ç²»ÇåÊÇ·ñÒ»¶¨ÐèÒª -->
+		<!-- é‚®ä»¶éœ€è¦çš„jaråŒ…ï¼Œè®°ä¸æ¸…æ˜¯å¦ä¸€å®šéœ€è¦ -->
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>javax.mail</artifactId>
 			<version>1.5.0</version>
 		</dependency>
-		<!-- µ¼ÈëdbcpµÄjar°ü£¬ÓÃÀ´ÔÚapplicationContext.xmlÖÐÅäÖÃÊý¾Ý¿â -->
+		<!-- å¯¼å…¥dbcpçš„jaråŒ…ï¼Œç”¨æ¥åœ¨applicationContext.xmlä¸­é…ç½®æ•°æ®åº“ -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		<!-- µ¼Èëjava ee jar °ü -->
+		<!-- å¯¼å…¥java ee jar åŒ… -->
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
 		</dependency>
-		<!-- springºËÐÄ°ü -->
+		<!-- springæ ¸å¿ƒåŒ… -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -108,13 +108,13 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<!-- mybatisºËÐÄ°ü -->
+		<!-- mybatisæ ¸å¿ƒåŒ… -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>${mybatis.version}</version>
 		</dependency>
-		<!-- mybatis/spring°ü -->
+		<!-- mybatis/springåŒ… -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
@@ -126,7 +126,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- µ¼Èëmybatis°ü -->
+		<!-- å¯¼å…¥mybatisåŒ… -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
@@ -134,13 +134,13 @@
 		</dependency>
 
 
-		<!-- µ¼ÈëMysqlÊý¾Ý¿âÁ´½Ójar°ü -->
+		<!-- å¯¼å…¥Mysqlæ•°æ®åº“é“¾æŽ¥jaråŒ… -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.30</version>
 		</dependency>
-		<!-- jsonÊý¾Ý -->
+		<!-- jsonæ•°æ® -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
@@ -152,7 +152,7 @@
 			<version>1.9.13</version>
 		</dependency>
 		
-		<!-- JSTL±êÇ©Àà -->
+		<!-- JSTLæ ‡ç­¾ç±» -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
@@ -161,7 +161,7 @@
 		
 
 
-		<!-- ÈÕÖ¾ÎÄ¼þ¹ÜÀí°ü -->
+		<!-- æ—¥å¿—æ–‡ä»¶ç®¡ç†åŒ… -->
 		<!-- log start -->
 		<dependency>
 			<groupId>log4j</groupId>
